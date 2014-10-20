@@ -18,10 +18,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/etc/fstab.qcom:recovery/root/fstab.qcom \
     $(LOCAL_PATH)/recovery/etc/init.recovery.qcom.rc:root/init.recovery.qcom.rc
 
-# Charger
+# Off-mode charging
 PRODUCT_PACKAGES += \
-    charger \
-    charger_res_images
+    charge \
+    offmode_charging_res_images
 
 $(call inherit-product, build/target/product/full.mk)
 

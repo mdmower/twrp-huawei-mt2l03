@@ -27,8 +27,7 @@ TARGET_KERNEL_CONFIG := mt2l03_defconfig
 TARGET_KERNEL_SOURCE := kernel/huawei/mt2l03
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000 --dt device/huawei/mt2l03/prebuilt/dt.img
-# Build DT
-# ToDo
+# Build DT (To Do)
 #BOARD_CUSTOM_BOOTIMG_MK := device/huawei/mt2l03/mkbootimg.mk
 #BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 
@@ -53,9 +52,6 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 # Vold
 BOARD_VOLD_MAX_PARTITIONS := 25
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
-
-# Charging
-# ToDo
 
 # TWRP
 DEVICE_RESOLUTION := 720x1280

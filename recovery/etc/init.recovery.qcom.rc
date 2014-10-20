@@ -11,6 +11,7 @@ on boot
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 300000
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 300000
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 300000
+    start chargeled
     setprop recovery.perf.mode 0
 
 on property:recovery.perf.mode=0
@@ -48,8 +49,12 @@ on property:power_off_charge=1
 on property:ro.bootmode=hwcharger
     stop recovery
     stop adbd
+    stop chargeled
     setprop power_off_charge 1
     start charge
 
 service charge /sbin/charge
+    disabled
+
+service chargeled /sbin/chargeled
     disabled

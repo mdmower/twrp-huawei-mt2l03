@@ -18,6 +18,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/etc/fstab.qcom:recovery/root/fstab.qcom \
     $(LOCAL_PATH)/recovery/etc/init.recovery.qcom.rc:root/init.recovery.qcom.rc
 
+PRODUCT_PACKAGES += \
+    chargeled
+
 # Off-mode charging
 PRODUCT_PACKAGES += \
     charge \
